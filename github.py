@@ -13,9 +13,6 @@ def decode(encoded_password: str):
     return decoded_password
 
 
-print(encoder("00009962"))
-print(decode("33332295"))
-
 def main():
     encoded_password = ""
     while True:
@@ -25,7 +22,7 @@ def main():
             print("Your password has been encoded and stored!")
             encoded_password = encoder(password)
         elif menu_selection == '2':
-            original_password = decode_password(encoded_password)
+            original_password = decode(encoded_password)
             print(f"The encoded password is {encoded_password}, and the original password is {original_password}")
         elif menu_selection == '3':
             break
