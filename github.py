@@ -5,13 +5,16 @@ def encoder(num_list):
         encoded_password += str((int(i) + 3) % 10)
     return encoded_password
 
-def decode_password(encoded_password):
+
+def decode(encoded_password: str):
     decoded_password = ""
-    for digit in encoded_password:
-        decoded_digit = str((int(digit) - 3) % 10)
-        decoded_password += decoded_digit
+    for num in encoded_password:
+        decoded_password += str((int(num) - 3) % 10)
     return decoded_password
 
+
+print(encoder("00009962"))
+print(decode("33332295"))
 
 def main():
     encoded_password = ""
