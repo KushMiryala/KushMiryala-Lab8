@@ -1,4 +1,4 @@
-
+# kush
 def encoder(num_list):
     encoded_password = ""
     for i in num_list:
